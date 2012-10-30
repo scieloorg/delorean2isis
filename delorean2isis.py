@@ -16,7 +16,7 @@ import config
 
 def save_bundle_tar(file_name, data, path=""):
     try:
-        bundle = open(os.path.join(path, file_name + '.tar'), "w")
+        bundle = open(os.path.join(path, file_name + '.tar'), "wb")
         bundle.write(data.read())
         bundle.close()
     except IOError, e:
