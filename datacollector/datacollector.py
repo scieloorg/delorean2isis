@@ -41,8 +41,8 @@ class DataCollector(object):
 
         # memoization to avoid unecessary field lookups
         # Ex.: _memo['publishers']['1'] = 'Unesp'
-        # self._memo = {}
-        # self._last_resource = {}
+        self._memo = {}
+        self._last_resource = {}
 
     def fetch_data(self, offset, limit, collection=None):
         kwargs = {}

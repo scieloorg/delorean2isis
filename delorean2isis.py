@@ -65,7 +65,7 @@ def append_ahead_issue(issue_id_path, collection, year):
 
     string_nahead = transformer.transform_list(iter_data, year)
 
-    open(issue_id_path, 'a').write(string_nahead.encode('utf8'))
+    open(issue_id_path, 'a').write(string_nahead.encode('ISO-8859-1'))
 
     return issue_id_path
 

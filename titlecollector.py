@@ -1,5 +1,5 @@
 #coding:utf-8
-from datacollector import DataCollector
+from datacollector.datacollector import DataCollector
 
 
 class TitleCollector(DataCollector):
