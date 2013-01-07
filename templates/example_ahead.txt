@@ -1,0 +1,36 @@
+!ID 0000005
+!v991!1
+!v700!0
+!v706!i
+!v701!1
+!v091!20121214 OK
+!v130!Revista de Saúde Pública OK
+!v421!Rev Saude Publica NOT
+!v151!Rev. saúde pública OK
+!v230!Journal of Public Health OK
+!v035!0034-8910 OK
+!v480!Faculdade de Saúde Pública da Universidade de São Paulo OK
+!v030!Rev. Saúde Pública OK
+!v930!RSP OK
+!v117!vancouv 117
+!v085!decs OK
+!v935!0034-8910 OK
+!v032!ahead
+!v036!201250 NOT (THIS THE FIELD THAT WE HAVE TO CREATE)
+!v042!1 OK
+!v200!0 NOT
+!v065!20120000 OK
+!v122!66 OK (THIS IS THE NEW FIELD WITH TOTAL DOCUMENTS)
+!v048!^les^hSumario OK
+!v048!^lpt^hSumário OK
+!v048!^len^hTable of Contents OK
+!v043!^les^tRev. Saúde Pública^nno.ahead^cSão Paulo^a2012 OK
+!v043!^lpt^tRev. Saúde Pública^nno.ahead^cSão Paulo^a2012 OK
+!v043!^len^tRev. Saúde Pública^nno.ahead^cSão Paulo^a2012 OK
+!v540!^t<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a> Todo el contenido de esta revista, excepto dónde está identificado, est&#225; bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">Licencia Creative Commons</a>^les
+!v540!^t<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a> Todo o conteúdo deste periódico, exceto onde est&#225 identificado, est&#225; licenciado sob uma <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">Licen&#231;a Creative Commons</a>^lpt
+!v540!^t<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a> All the contents of this journal, except where otherwise noted, is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution License</a>^len
+!v541!BY-NC NOT
+!v999!../bases-work/rsp/rsp
+!v005!last NOT
+!v006!275 NOT

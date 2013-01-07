@@ -4,14 +4,17 @@
 import os
 import sys
 import json
-import shutil
 import urllib
+import shutil
 import tarfile
 import urllib2
 import tempfile
 import argparse
 
 import config
+
+from titlecollector import TitleCollector
+from transformer import Transformer
 
 
 def save_bundle_tar(file_name, data, path=""):
@@ -48,6 +51,25 @@ def isis_exec(cmd):
         print "OSError:", e
         sys.exit()
 
+
+def append_ahead_issue(issue_id_path, collection, year):
+
+    HERE = os.path.abspath(os.path.dirname(__file__))
+
+    # data generator
+    iter_data = TitleCollector(config.API_URL, collection=collection)
+
+    # id file rendering
+    transformer = Transformer(filename=os.path.join(HERE,
+        'templates/issue_db_entry.txt'))
+
+    string_nahead = transformer.transform_list(iter_data, year)
+
+    open(issue_id_path, 'a').write(string_nahead.encode('utf8'))
+
+    return issue_id_path
+
+
 def main():
 
     parser = argparse.ArgumentParser(
@@ -80,10 +102,14 @@ def main():
         save_bundle_tar(database, bundle, tmp_dir)
 
         print "Extract tar file and generate " + database + " id file."
-        database_id = extract_tar(database, tmp_dir)
+        database_id_path = extract_tar(database, tmp_dir)
+
+        if database == 'issue':
+            append_ahead_issue(database_id_path, args.collection, 'CURRENT')
+            append_ahead_issue(database_id_path, args.collection, 'LAST_YEAR')
 
         print "Generate isis database: " + database
-        isis_exec(config.ISIS_PATH + 'id2i ' + database_id + ' create/app=' \
+        isis_exec(config.ISIS_PATH + 'id2i ' + database_id_path + ' create/app=' \
             + os.path.join(args.output, database, database))
 
         print "Generate isis index using fst: " + config.DATABASE_FST[database]

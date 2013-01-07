@@ -1,0 +1,107 @@
+<%! from collections import Iterable %>
+!ID 0
+##
+% if short_title is not UNDEFINED and short_title:
+!v030!${short_title}
+% endif
+##
+##
+% if title_iso is not UNDEFINED and title_iso:
+!v151!${title_iso}
+% endif
+##
+!v032!ahead
+##
+% if scielo_issn is not UNDEFINED and scielo_issn:
+% if scielo_issn == 'print':
+!v035!${print_issn}
+% elif scielo_issn is not UNDEFINED and eletronic_issn:
+!v035!${eletronic_issn}
+% endif
+% endif
+% if is_trashed is not UNDEFINED and not is_trashed:
+!v042!1
+% endif
+##
+##
+% if isinstance(sponsors, Iterable):
+% for value in sponsors:
+!v480!${value}
+% endfor
+% endif
+##
+!v043!${display['es']}
+##
+!v043!${display['pt']}
+##
+!v043!${display['en']}
+##
+!v048!^les^hSumario
+!v048!^lpt^hSumario
+!v048!^len^hTable of Contents
+##
+% if publication_date is not UNDEFINED and publication_date:
+!v065!${publication_date}
+% endif
+% if ctrl_vocabulary is not UNDEFINED and ctrl_vocabulary:
+!v085!${ctrl_vocabulary}
+% endif
+% if created is not UNDEFINED and created:
+!v091!${created}
+% endif
+% if editorial_standard is not UNDEFINED and editorial_standard:
+!v117!${editorial_standard}
+% endif
+% if title is not UNDEFINED and title:
+!v130!${title}
+% endif
+##
+% if is_marked_up is not UNDEFINED and is_marked_up == True:
+!v200!1
+% else:
+!v200!0
+% endif
+##
+% if isinstance(sponsors, Iterable):
+% for value in sponsors:
+!v230!${value}
+% endfor
+% endif
+##
+!v706!i
+##
+% if acronym is not UNDEFINED and acronym:
+!v930!${acronym}
+% endif
+% if scielo_issn is not UNDEFINED and scielo_issn:
+% if scielo_issn == 'print' and eletronic_issn is not UNDEFINED and eletronic_issn:
+!v935!${eletronic_issn}
+% elif print_issn is not UNDEFINED and print_issn:
+!v935!${print_issn}
+% endif
+% endif
+##
+% if use_license is not UNDEFINED and use_license:
+!v540!^t${use_license['disclaimer']}^len
+!v540!^t${use_license['disclaimer']}^les
+!v540!^t${use_license['disclaimer']}^lpt
+% endif
+% if use_license['license_code'] is not UNDEFINED and use_license['license_code']:
+!v541!${use_license['license_code']}
+% endif
+##
+% if publication_date is not UNDEFINED and publication_date:
+!v036!${publication_date}50 
+% endif
+##
+##
+% if current_total_documents is not UNDEFINED and current_total_documents:
+!v122!${current_total_documents} 
+% endif
+##
+##
+% if previous_total_documents is not UNDEFINED and previous_total_documents:
+!v122!${previous_total_documents} 
+% endif
+##
+
