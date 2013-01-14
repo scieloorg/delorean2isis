@@ -30,9 +30,12 @@ class DataCollector(object):
 
     ITEMS_PER_REQUEST = 20
 
-    def __init__(self, resource_url, slumber_lib=slumber, collection=None):
+    def __init__(self, resource_url, slumber_lib=slumber, collection=None,
+         username=None, api_key=None):
         self._resource_url = resource_url
         self._slumber_lib = slumber_lib
+        self._username = username
+        self._api_key = api_key
 
         self._api = self._slumber_lib.API(resource_url)
         self.resource = getattr(self._api, self._resource_name)
@@ -45,7 +48,7 @@ class DataCollector(object):
         self._last_resource = {}
 
     def fetch_data(self, offset, limit, collection=None):
-        kwargs = {}
+        kwargs = {'username': self._username, 'api_key': self._api_key}
 
         if collection:
             kwargs['collection'] = collection
@@ -97,7 +100,8 @@ class DataCollector(object):
             if res_lookup_key not in self._last_resource:
                 self._last_resource = {}  # release the memory
                 self._last_resource[res_lookup_key] = getattr(
-                    self._api, endpoint)(res_id).get()
+                    self._api, endpoint)(res_id).get(username=self._username,
+                        api_key=self._api_key)
 
             return self._last_resource[res_lookup_key]
 

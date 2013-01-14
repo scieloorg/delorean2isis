@@ -57,7 +57,8 @@ def append_ahead_issue(issue_id_path, collection, year):
     HERE = os.path.abspath(os.path.dirname(__file__))
 
     # data generator
-    iter_data = TitleCollector(config.API_URL, collection=collection)
+    iter_data = TitleCollector(config.API_URL, collection=collection,
+            username=config.API_USER, api_key=config.API_KEY)
 
     # id file rendering
     transformer = Transformer(filename=os.path.join(HERE,
