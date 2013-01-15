@@ -41,7 +41,7 @@
 !v048!^len^hTable of Contents
 ##
 % if publication_date is not UNDEFINED and publication_date:
-!v065!${publication_date}
+!v065!${publication_date}0000
 % endif
 % if ctrl_vocabulary is not UNDEFINED and ctrl_vocabulary:
 !v085!${ctrl_vocabulary}
@@ -91,17 +91,17 @@
 % endif
 ##
 % if publication_date is not UNDEFINED and publication_date:
-!v036!${publication_date}50 
+!v036!${publication_date}50
 % endif
 ##
 ##
 % if current_total_documents is not UNDEFINED and current_total_documents:
-!v122!${current_total_documents} 
+!v122!${current_total_documents}
 % endif
 ##
 ##
 % if previous_total_documents is not UNDEFINED and previous_total_documents:
-!v122!${previous_total_documents} 
+!v122!${previous_total_documents}
 % endif
 ##
 

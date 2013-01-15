@@ -109,14 +109,14 @@ def main():
             append_ahead_issue(database_id_path, args.collection, 'CURRENT')
             append_ahead_issue(database_id_path, args.collection, 'LAST_YEAR')
 
-        print "Generate isis database: " + database
+        print "Generate isis database: " + database        
         isis_exec(config.ISIS_PATH + 'id2i ' + database_id_path + ' create/app=' \
             + os.path.join(args.output, database, database))
 
         print "Generate isis index using fst: " + config.DATABASE_FST[database]
         isis_exec(config.ISIS_PATH + 'mx ' + os.path.join(args.output, database, database) \
             + ' fst=@' + config.DATABASE_FST[database] + '.fst fullinv/ansi=' \
-            + os.path.join(args.output, database, config.DATABASE_FST[database]) + ' -all now')
+            + os.path.join(args.output, database, config.DATABASE_FST[database]))
 
     print "Deleting temp directory: " + tmp_dir
     shutil.rmtree(tmp_dir)
