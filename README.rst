@@ -15,7 +15,7 @@ Requirements
 How to Install
 ==============
 
-    #. Run pip install -r requirements.py
+    #. Run pip install -r requirements.txt
     #. Edit the config file according to your Journal Manager credentians.
 
 Importing data
