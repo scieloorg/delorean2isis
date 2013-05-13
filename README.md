@@ -8,15 +8,15 @@ Script to get import journals metadata from Journal Manager to ISIS databases.
 Requirements
 ============
 
-    #. Python2.7
-    #. Slumber
-    #. Mako Templates
-
+    #. Python2.7 (http://python.org)
+    #. easy_install (https://pypi.python.org/pypi/setuptools)
+    #. pip (http://www.pip-installer.org/en/latest/installing.html)
+        
 How to Install
 ==============
 
-    #. Edit the config file according to your Journal Manager credentians.
     #. Run pip install -r requirements.py
+    #. Edit the config file according to your Journal Manager credentians.
 
 Importing data
 ==============
