@@ -2,7 +2,7 @@
 delorean2isis
 =============
 
-Script to get import journals metadata from Journal Manager to ISIS databases.
+Script to import journals metadata from Journal Manager to ISIS databases.
 
 
 Requirements
