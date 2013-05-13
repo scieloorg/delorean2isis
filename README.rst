@@ -25,5 +25,6 @@ python delorean2isis.py -c COLLECTION -o g:/SciELO/serial
 
 where
 
--c is the collection slugname at Journal Manager
--o is the directory where the imported files will be copied
+**-c** is the collection slugname at Journal Manager
+
+**-o** is the directory where the imported files will be copied
