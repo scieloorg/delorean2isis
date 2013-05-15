@@ -11,6 +11,7 @@ Requirements
     #. Python2.7 (http://python.org)
     #. easy_install (https://pypi.python.org/pypi/setuptools)
     #. pip (http://www.pip-installer.org/en/latest/installing.html)
+    #. CISIS 10/30 (http://wiki.bireme.org/pt/index.php/CISIS)
         
 How to Install
 ==============
@@ -28,3 +29,4 @@ where
 **-c** is the collection slugname at Journal Manager
 
 **-o** is the directory where the imported files will be copied
+
