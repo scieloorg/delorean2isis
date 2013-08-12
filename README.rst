@@ -9,7 +9,6 @@ Requirements
 ============
 
     #. Python2.7 (http://python.org)
-    #. easy_install (https://pypi.python.org/pypi/setuptools)
     #. pip (http://www.pip-installer.org/en/latest/installing.html)
     #. CISIS 10/30 (http://wiki.bireme.org/pt/index.php/CISIS)
         
