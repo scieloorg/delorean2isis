@@ -21,7 +21,7 @@ How to Install
 Importing data
 ==============
 
-python delorean2isis.py -c COLLECTION -o g:/SciELO/serial
+python delorean2isis.py -c COLLECTION_SLUG -o g:/SciELO/serial
 
 where
 
