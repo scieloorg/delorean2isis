@@ -1,5 +1,5 @@
-#!/usr/bin/python
 #coding:utf-8
+#!/usr/bin/python
 
 API_URL = 'http://localhost:8000/api/v1/'
 API_USER = ''
