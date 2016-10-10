@@ -1,2 +1,3 @@
 slumber
 mako
+-e git+https://github.com/scieloorg/delorean2isis@1.0.0#egg=delorean2isis
