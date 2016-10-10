@@ -10,8 +10,9 @@ with open(os.path.join(here, 'CHANGES.rst')) as f:
     CHANGES = f.read()
 
 install_requires = [
-    'slumber',
-    'mako'
+    'slumber==0.7.1',
+    'mako==1.0.4',
+    'requests==2.11.1'
     ]
 
 test_requires = []
@@ -44,5 +45,9 @@ setup(
     setup_requires=["nose>=1.0", "coverage"],
     tests_require=test_requires,
     install_requires=install_requires,
-    test_suite="nose.collector"
+    test_suite="nose.collector",
+    entry_points="""\
+    [console_scripts]
+    delorean2isis = delorean2isis:main
+    """,
 )

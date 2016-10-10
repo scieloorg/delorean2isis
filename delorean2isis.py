@@ -121,6 +121,3 @@ def main():
     print "Deleting temp directory: " + tmp_dir
     shutil.rmtree(tmp_dir)
     print "Finish process."
-
-if __name__ == "__main__":
-    main()
