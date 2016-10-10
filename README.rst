@@ -21,7 +21,9 @@ How to Install
 Docker Install
 ==============
 
-Docker build -t scieloorg/delorean2isis
+docker build -t scieloorg/delorean2isis
+
+
 
 Environment variables
 ---------------------

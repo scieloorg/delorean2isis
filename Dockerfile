@@ -2,7 +2,11 @@ FROM python:2.7.12
 
 MAINTAINER tecnologia@scielo.org
 
-COPY requirements.txt /app/requirements.txt
+RUN apt-get update
+RUN apt-get install -y lib32z1
+RUN apt-get install -y lib32ncurses5
+
+COPY requirements.txt /app/requirements.txt 
 
 WORKDIR /app
 

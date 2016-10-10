@@ -1,1 +1,1 @@
-python delorean2isis.py -c $COLLECTION_SLUG -o g:$SERIAL_SOURCE_DIR
+delorean2isis -c $COLLECTION_SLUG -o $SERIAL_SOURCE_DIR
