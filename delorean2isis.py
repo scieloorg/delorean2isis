@@ -18,8 +18,8 @@ from transformer import Transformer
 
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 DATABASES_FST = {
-    'title': os.path.join(DIR_PATH, 'title.fst'),
-    'issue': os.path.join(DIR_PATH, 'issue.fst')
+    'title': os.path.join(DIR_PATH, 'title'),
+    'issue': os.path.join(DIR_PATH, 'issue')
 }
 
 
@@ -121,7 +121,7 @@ def main():
 
         print "Generate isis index using fst: " + DATABASES_FST[database]
         isis_exec(config.ISIS_PATH + 'mx ' + os.path.join(args.output, database, database) \
-            + ' fst=@' + DATABASES_FST[database] + ' fullinv/ansi=' \
+            + ' fst=@' + DATABASES_FST[database] + '.fst fullinv/ansi=' \
             + os.path.join(args.output, database, database))
 
     print "Deleting temp directory: " + tmp_dir
