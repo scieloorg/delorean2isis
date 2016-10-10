@@ -19,7 +19,7 @@ test_requires = []
 
 setup(
     name="delorean2isis",
-    version='1.0.0',
+    version='1.0.1',
     description="A SciELO utilitary to download SciELO Manager content to local SciELO sites for processing",
     author="SciELO",
     author_email="scielo-dev@googlegroups.com",
