@@ -119,10 +119,10 @@ def main():
         isis_exec(config.ISIS_PATH + 'id2i ' + database_id_path + ' create/app=' \
             + os.path.join(args.output, database, database))
 
-        print "Generate isis index using fst: " + DATABASE_FST[database]
+        print "Generate isis index using fst: " + DATABASES_FST[database]
         isis_exec(config.ISIS_PATH + 'mx ' + os.path.join(args.output, database, database) \
-            + ' fst=@' + config.DATABASE_FST[database] + ' fullinv/ansi=' \
-            + os.path.join(args.output, database, DATABASE_FST[database]))
+            + ' fst=@' + config.DATABASES_FST[database] + ' fullinv/ansi=' \
+            + os.path.join(args.output, database, DATABASES_FST[database]))
 
     print "Deleting temp directory: " + tmp_dir
     shutil.rmtree(tmp_dir)
