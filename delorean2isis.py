@@ -16,6 +16,12 @@ import config
 from titlecollector import TitleCollector
 from transformer import Transformer
 
+DIR_PATH = os.path.dirname(os.path.realpath(__file__))
+DATABASES_FST = {
+    'title': os.path.join(DIR_PATH, 'title.fst'),
+    'issue': os.path.join(DIR_PATH, 'issue.fst')
+}
+
 
 def save_bundle_tar(file_name, data, path=""):
     try:
@@ -91,7 +97,7 @@ def main():
         print "OSError:", e
         sys.exit()
 
-    for database in config.DATABASES:
+    for database in DATABASES_FST:
         print "Get metadata from database: " + database.upper() + " on collection " \
             + args.collection.upper() + "..."
         params = urllib.urlencode({'collection': args.collection})
@@ -109,13 +115,13 @@ def main():
             append_ahead_issue(database_id_path, args.collection, 'CURRENT')
             append_ahead_issue(database_id_path, args.collection, 'LAST_YEAR')
 
-        print "Generate isis database: " + database        
+        print "Generate isis database: " + database
         isis_exec(config.ISIS_PATH + 'id2i ' + database_id_path + ' create/app=' \
             + os.path.join(args.output, database, database))
 
         print "Generate isis index using fst: " + config.DATABASE_FST[database]
         isis_exec(config.ISIS_PATH + 'mx ' + os.path.join(args.output, database, database) \
-            + ' fst=@' + config.DATABASE_FST[database] + '.fst fullinv/ansi=' \
+            + ' fst=@' + config.DATABASE_FST[database] + ' fullinv/ansi=' \
             + os.path.join(args.output, database, config.DATABASE_FST[database]))
 
     print "Deleting temp directory: " + tmp_dir
