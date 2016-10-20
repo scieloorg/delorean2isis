@@ -22,10 +22,15 @@ Environment variables
 ---------------------
 
     API_URL  # URL to the SciELO Manager API.
+
     API_USER  # You API user name in SciELO Manager.
+    
     API_KEY  # Your API key in SciELO Manager.
+    
     DELOREAN_URL  # domain to Delorean.
+    
     COLLECTION_SLUG  # Collection Slug in SciELO Manager.
+    
     SERIAL_SOURCE_DIR  # full path to the serial folder where the databases will be copied to.
 
 Running
@@ -43,10 +48,15 @@ Environment variables
 ---------------------
 
     API_URL  # URL to the SciELO Manager API.
+    
     API_USER  # You API user name in SciELO Manager.
+    
     API_KEY  # Your API key in SciELO Manager.
+    
     DELOREAN_URL  # domain to Delorean.
+    
     COLLECTION_SLUG  # Collection Slug in SciELO Manager.
+    
     SERIAL_SOURCE_DIR  # full path to the serial folder where the databases will be copied to.
 
 
