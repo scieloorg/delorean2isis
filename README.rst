@@ -36,7 +36,7 @@ Environment variables
 Running
 -------
 
-    python delorean2isis.py -c $COLLECTION_SLUG -o $SERIAL_SOURCE_DIR
+    delorean2isis -c $COLLECTION_SLUG -o $SERIAL_SOURCE_DIR
 
 
 How To Install with Docker
