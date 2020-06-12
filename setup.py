@@ -12,7 +12,7 @@ with open(os.path.join(here, 'CHANGES.rst')) as f:
 install_requires = [
     'slumber==0.7.1',
     'mako==1.0.4',
-    'requests==2.11.1'
+    'requests==2.20.0'
     ]
 
 test_requires = []
