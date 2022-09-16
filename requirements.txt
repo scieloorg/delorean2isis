@@ -1,4 +1,4 @@
 slumber==0.7.1
-mako==1.0.4
+mako==1.2.2
 requests==2.11.1
 -e git+https://github.com/scieloorg/delorean2isis#egg=delorean2isis
